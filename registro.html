@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -26,11 +27,45 @@
     <section>
         <form action="#" method="POST" id="form-registro">
             <!-- espacio para el formulario de registro -->
+            <div class="form-header">
+                <h2>
+                    Registro
+                </h2>
+            </div>
+            <div class="form-seccion">
+                <label for="nombre" class="lblNombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" class="form-input">
+
+            </div>
+            <div class="form-seccion">
+                <label>Género</label><br>
+                <input type="radio" name="genero" id="masculino" value="masculino">
+                <label for="masculino">M</label>
+                <input type="radio" name="genero" id="femenino" value="femenino">
+                <label for="femenino">F</label>
+
+            </div>
+            <div class="form-seccion">
+                <label for="direccion" id="direccion">Dirección</label><br>
+                <input type="text" name="direccion" id="direccion" class="form-input">
+            </div>
+            <div class="form-seccion">
+                <label for="correo" id="correo">Correo</label><br>
+                <input type="email" name="correo" id="correo" class="form-input">
+            </div>
+            <div class="form-seccion">
+                <label for="contrasena" id="contrasena">Contraseña</label><br>
+                <input type="password" name="contrasena" id="contrasena" class="form-input">
+            </div>
+
+            <br>
+            <br>
+            <br>
 
 
-
+            <!-- TODO elimiar el Type del boton-->
             <!-- espacio para el botton del formulario de registro -->
-            <input id="btn-submit-form">
+            <input type="submit" id="btn-submit-form">
 
         </form>
     </section>
