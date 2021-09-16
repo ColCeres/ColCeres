@@ -1,5 +1,24 @@
 /* Seccion de header */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+	margin:0;
+    padding:0;
+}
+body 
+{ font-family: 'Lato', sans-serif;}
 
+#Header{
+	background: #2a9d8f;
+  	width:100%;
+    height:100px;
+  	position: absolute;
+}
+header h1{
+	position: relative;
+  	top:25px;
+  	left:16px;
+  	color:#fff;
+}
 
 /* FIN de Seccion de header */
 
