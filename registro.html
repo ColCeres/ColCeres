@@ -7,23 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 
 <body>
-    <header id="Header">
+    <header id="header">
         <!-- espacio para el header -->
         <h1>ColCeres</h1>
+
+        <nav id="nav-menu" class="navbar">
+
+            <div class="nav">
+                <input type="checkbox" id="nav-check">
+                <!-- <div class="nav-header">
+                    <div class="nav-title">
+                        Frutas, verduras y artesanias xd
+                    </div>
+                </div> -->
+                <div class="nav-btn">
+
+                    <label for="nav-check">
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                                      
+                    </label>
+
+                </div>
+
+                <div class="nav-links">
+                    <!-- <a href="index.html">Inicio</a>
+                    <a href="registro.html">Registro</a> -->
+                    <!-- Botón de registro dentro del menú hamburguesa -->
+                    <button type="button" id="btn-registrar">
+                        <a href="index.html"  class="btn-registrar">Inicio</a>
+                    </button>
+                </div>
+
+            </div>
+
+        </nav>
+
     </header>
 
-    <nav id="nav-menu">
-        <!-- espacio para el menu nav -->
 
-        <button id="btn-registrar">
-            <!-- espacio para el boton de registrar -->
-            
-        </button>
-    </nav>
 
     <section class="section-form">
         <form action="#" method="POST" id="form-registro">
@@ -40,9 +68,9 @@
             </div>
             <div class="form-seccion">
                 <label>Género</label><br>
-                <input type="radio" name="genero" id="m" value="masculino" class="form-radio">
+                <input type="radio" name="genero" id="M" value="masculino" class="form-radio">
                 <label for="m">M</label>
-                <input type="radio" name="genero" id="f" value="femenino" class="form-radio">
+                <input type="radio" name="genero" id="F" value="femenino" class="form-radio">
                 <label for="f">F</label>
 
             </div>
