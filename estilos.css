@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+=======
+>>>>>>> devD3jatori
 :root {
     --primary: #1d3557;
     --secundary: #73C6B6;
@@ -11,6 +14,7 @@
     --dark: #212121;
 }
 
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +24,8 @@
 }
 
 
+=======
+>>>>>>> devD3jatori
 /* Seccion de header */
 
 #header {
@@ -149,6 +155,16 @@ header h1 {
 
 /* Seccion de button nav */
 
+/* Botón de registro dentro del menú hamburguesa */
+#btn-registrar{
+    border: 1px solid var(--secundary); /* Anchura, estilo y color borde */
+    padding: 10px; /* Espacio alrededor texto */
+    background-color: var(--secundary); /*color botón*/
+    color: var(--primary); /* Color texto */
+    font-family: 'Lato', sans-serif; /* Tipografía texto */
+    border-radius: 50px; /* Bordes redondos */
+    margin: auto; /* Alineación del margen */
+}
 
 /* FIN de Seccion de button nav */
 
