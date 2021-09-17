@@ -12,6 +12,16 @@
 
 /* Seccion de button nav */
 
+/* Botón de registro dentro del menú hamburguesa */
+#btn-registrar{
+    border: 1px solid #73C6B6; /* Anchura, estilo y color borde */
+    padding: 10px; /* Espacio alrededor texto */
+    background-color: #73C6B6; /*color botón*/
+    color: #1D3557; /* Color texto */
+    font-family: 'Lato', sans-serif; /* Tipografía texto */
+    border-radius: 50px; /* Bordes redondos */
+    margin: auto; /* Alineación del margen */
+}
 
 /* FIN de Seccion de button nav */
 
