@@ -1,3 +1,15 @@
+:root {
+    --primary: #1d3557;
+    --secundary: #73C6B6;
+    --lightBlue: #457B9D;
+    --info: #A8DADC;
+    --danger: #E63946;
+    --success: #28B463;
+    --warning: #FFA726;
+    --white: #fff;
+    --dark: #212121;
+}
+
 /* Seccion de header */
 
 
@@ -14,10 +26,10 @@
 
 /* Botón de registro dentro del menú hamburguesa */
 #btn-registrar{
-    border: 1px solid #73C6B6; /* Anchura, estilo y color borde */
+    border: 1px solid var(--secundary); /* Anchura, estilo y color borde */
     padding: 10px; /* Espacio alrededor texto */
-    background-color: #73C6B6; /*color botón*/
-    color: #1D3557; /* Color texto */
+    background-color: var(--secundary); /*color botón*/
+    color: var(--primary); /* Color texto */
     font-family: 'Lato', sans-serif; /* Tipografía texto */
     border-radius: 50px; /* Bordes redondos */
     margin: auto; /* Alineación del margen */
