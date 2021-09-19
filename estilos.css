@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 :root {
     --primary: #1d3557;
     --secundary: #73C6B6;
     --lightBlue: #457B9D;
     --info: #A8DADC;
     --danger: #E63946;
-    --success: #28B463;
+    --success: hsl(145, 64%, 43%);
     --warning: #FFA726;
     --white: #fff;
     --dark: #212121;
@@ -14,7 +15,7 @@
 * {
     margin: 0;
     padding: 0;
-    color: var(--dark);
+    /* color: var(--dark); */
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
@@ -22,18 +23,21 @@
 
 /* Seccion de header */
 
-#header {
-    background: #2a9d8f;
-    width: 100%;
-    height: 100px;
-    /* position: absolute; */
+.header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--primary);
+    padding: 14px 40px;
+    text-align: start;
+    color: var(--white);
 }
 
-header h1 {
-    position: relative;
-    top: 25px;
-    left: 16px;
-    color: #fff;
+
+.header-logo {
+    text-align: start;
+    margin-left: 50px;
+    font-size: 18px;
+    padding: 13px;
 }
 
 
@@ -42,24 +46,11 @@ header h1 {
 
 /* Seccion de nav */
 
-.nav {
-    width: 200px;
-    height: 50px;
-    /* background-color: #001f27; */
-    position: relative;
-    float: right;
-    padding: 0px 40px;
-}
 
-.nav>.nav-header {
-    display: inline;
-}
 
-.nav>.nav-header>.nav-title {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: white;
-    padding: 10px;
+.navbar {
+    text-align: end;
+    margin-right: 50px;
 }
 
 .nav>.nav-btn {
@@ -67,8 +58,6 @@ header h1 {
 }
 
 .nav>.nav-links {
-    display: inline;
-    float: right;
     font-size: 18px;
 }
 
@@ -80,7 +69,7 @@ header h1 {
 }
 
 .nav>.nav-links>a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--secundary);
 }
 
 .nav>#nav-check {
@@ -90,59 +79,82 @@ header h1 {
 
 /* Navbar en movil o con pantalla menor a 900px */
 
-@media (max-width:4900px) {
-    .nav {
+@media (max-width:900px) {
+
+    .header {
+       padding: 14px 0px;
+    }
+
+    .header-logo {
+        text-align: start;
+        margin-left: 13px;
         padding: 0px;
     }
-    .nav>.nav-header>.nav-title {
-        font-size: 1.2rem;
-    }
+  
     .nav>.nav-btn {
         display: inline-block;
         position: absolute;
         right: 0px;
         top: 0px;
     }
+
     .nav>.nav-btn>label {
         display: inline-block;
         width: 50px;
-        height: 50px;
+        height: 49px;
         padding: 13px;
     }
+
     .nav>.nav-btn>label:hover,
     .nav #nav-check:checked~.nav-btn>label {
-        background-color: rgba(2, 90, 117, 0.808);
+        background-color: var(--lightBlue);
     }
+
     .nav>.nav-btn>label>span {
         display: block;
         width: 25px;
         height: 10px;
         border-top: 2px solid white;
     }
+
     .nav>.nav-links {
         position: absolute;
         display: block;
         width: 100%;
-        background-color: rgb(2, 90, 117);
+        background-color: var(--lightBlue);
         height: 0px;
         transition: all 0.3s ease-in;
         overflow-y: hidden !important;
-        top: 50px;
+        top: 49px;
         left: 0px;
     }
+
     .nav>.nav-links>a {
         display: block;
         width: 100%;
         text-align: center;
     }
+
     .nav>#nav-check:not(:checked)~.nav-links {
         height: 0px;
     }
+
     .nav>#nav-check:checked~.nav-links {
-        /* height: calc(100vh - 50px); */
-        height: auto;
+        height: calc(100vh - 49px);
         overflow-y: auto;
     }
+
+    .button-registrar {
+        display: block;
+        padding: 13px 10px;
+       
+        text-align: center;
+        /* width: 100%; */
+        margin: 0 auto;
+      
+        
+    }
+
 }
 
 
@@ -154,11 +166,11 @@ header h1 {
 
 /* Botón de registro dentro del menú hamburguesa */
 
-#btn-registrar {
+.button-registrar {
     /* border: 1px solid var(--secundary); */
     border: none;
     /* Anchura, estilo y color borde */
-    padding: 15px;
+    padding: 13px;
     /* Espacio alrededor texto */
     background-color: var(--secundary);
     /*color botón*/
@@ -168,22 +180,23 @@ header h1 {
     /* Tipografía texto */
     border-radius: 50px;
     /* Bordes redondos */
-    margin: 20%;
+    /* margin: 20%; */
     /* Alineación del margen */
-    float: right;
+    /* float: right; */
     /* margin: 50px; */
+    font-size: 18px;
     box-shadow: 2px 4px 5px var(--primary);
-    width: 100px;
+    /* width: 100px; */
 }
 
 a.btn-registrar {
     text-decoration: none;
     color: var(--primary);
-    font-weight: 900;
+    font-weight: 700;
 }
 
-#btn-registrar:hover {
-    background-color: var(--info);
+.btn-registrar:hover {
+    /* background-color: var(--info); */
     color: var(--white) !important;
 }
 
@@ -198,7 +211,7 @@ section.section-form {
     background-color: var(--lightBlue);
 }
 
-form#form-registro {
+form.form-registro {
     background-color: var(--white);
     border: 1px solid rgba(165, 165, 165, 0.198);
     max-width: 300px;
@@ -208,7 +221,7 @@ form#form-registro {
     padding: 0 20px 20px;
 }
 
-form#form-registro label {
+form.form-registro label {
     font-weight: 600;
 }
 
@@ -251,8 +264,10 @@ input[type="radio" i].form-radio {
 /* Seccion de boton del form */
 
 form input[type="submit" i].form-btn-enviar {
-    position: relative;
-    background-color: var(--success);
+    /* position: relative; */
+    display: block;
+    /* background-color: var(--success); */
+    background-color: var(--secundary);
     color: var(--white);
     border: none;
     padding: 10px;
@@ -263,10 +278,13 @@ form input[type="submit" i].form-btn-enviar {
     font-weight: 600;
     font-size: 1.2em;
     transition: 500ms;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 form input[type="submit" i].form-btn-enviar:hover {
-    background-color: var(--secundary);
+    /* background-color: var(--secundary); */
+    background-color: var(--success);
     color: var(--primary);
     transform: scale(1.2);
 }
