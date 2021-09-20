@@ -5,32 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Registro | ColCeres 🛒</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 
 <body>
-    <header>
-        <!-- espacio para el header -->
 
+    <header id="header" class="header">
+
+        <!-- espacio para el header -->
+        <p class="header-logo">ColCeres 🛒</p>
+
+
+        <!-- espacio para el menu nav -->
+        <nav id="nav-menu" class="navbar">
+
+            <div class="nav">
+                <input type="checkbox" id="nav-check">
+
+                <div class="nav-btn">
+                    <label for="nav-check">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </label>
+                </div>
+
+                <div class="nav-links">
+                    <a href="index.html"><i class="fa fa-home fa-1x" aria-hidden="true"></i></a>
+                    <a href="registro.html">Registro</a>
+                    <a href="registro.html">Galeria</a>
+
+                    <!-- Botón de registro dentro del menú hamburguesa -->
+
+                    <button type="button" class="button-registrar" id="btn-registrar">
+                        <a href="registro.html" id="enlace-registro" class="btn-registrar">Registrarse</a>
+                    </button>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <nav id="nav-menu">
-        <!-- espacio para el menu nav -->
 
-        <button id="btn-registrar">
-            <!-- espacio para el boton de registrar -->
-            
-        </button>
-    </nav>
 
-    <section>
-        <form action="#" method="POST" id="form-registro">
+
+
+
+
+
+
+    <section class="section-form">
+        <form action="#" method="#" class="form-registro" id="form-registro">
             <!-- espacio para el formulario de registro -->
+            <div class="form-header">
+                <h2>
+                    Registro
+                </h2>
+            </div>
+            <div class="form-seccion">
+                <label for="nombre" class="lblNombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" class="form-input">
 
+            </div>
+            <div class="form-seccion">
+                <label>Género</label><br>
+                <input type="radio" name="genero" id="M" value="masculino" class="form-radio">
+                <label for="m">M</label>
+                <input type="radio" name="genero" id="F" value="femenino" class="form-radio">
+                <label for="f">F</label>
 
+            </div>
+            <div class="form-seccion">
+                <label for="telefono">Teléfono</label><br>
+                <input type="tel" name="telefono" id="telefono" class="form-input">
+            </div>
+            <div class="form-seccion">
+                <label for="direccion">Dirección</label><br>
+                <input type="text" name="direccion" id="direccion" class="form-input">
+            </div>
+            <div class="form-seccion">
+                <label for="correo">Correo</label><br>
+                <input type="email" name="correo" id="correo" class="form-input">
+            </div>
+            <div class="form-seccion">
+                <label for="contrasena">Contraseña</label><br>
+                <input type="password" name="contrasena" id="contrasena" class="form-input">
+            </div>
+            <br>
 
             <!-- espacio para el botton del formulario de registro -->
-            <input id="btn-submit-form">
+            <input type="submit" id="btn-submit-form" value="Enviar" class="form-btn-enviar">
 
         </form>
     </section>
