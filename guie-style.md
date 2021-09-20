@@ -8,7 +8,7 @@ The designs were created to the following widths:
 
 ## Colors
 
-Backgrounds:
+Background:
 
 - #A8DADC
 
@@ -24,7 +24,7 @@ Text:
 
 - #FFFFFF
 
-Buttons:
+Button:
 
 - #FFA726
 
