@@ -272,3 +272,17 @@ form input[type="submit" i].form-btn-enviar:hover {
 
 
 /* FIN de Seccion de boton del form */
+
+
+/**************************** seccion de validacion de formulario sprint 2 **********************************/
+
+
+/* validacion de campo contrasena */
+
+.passSpan {
+    color: var(--danger);
+    font-size: 0.7em;
+}
+
+
+/* fin validacion de campo contrasena */

@@ -36,6 +36,8 @@ function validateForm(event) {
 
 
 // espacio para validacion de campo Correo
+const regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
 
 // fin espacio para validacion de campo Correo
 
@@ -43,18 +45,23 @@ function validateForm(event) {
 // espacio para validacion de campo Contraseña
 
 function checkContrasena(pass) {
-    if (pass.length <= 8) {
-        alert("la contraseña debe tener minimo 8 digitos");
-        document.getElementById('contrasena').focus();
-    } else {
-        return true
-    }
-    console.log(pass.length);
+    const reg = /^(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{8,}$/;
+    console.log("test " + reg.test(pass));
 
+    if (!reg.test(pass)) {
+        document.getElementById('passSpan').innerHTML = "La contraseña debe tener minimo 8 digitos, una mayúscula, una minúscula y un número."
+        document.getElementById('contrasena').focus();
+        console.log("[ERR]", "La contraseña debe tener minimo 8 digitos, una mayuscula, una minuscula y un numero");
+        return false;
+    } else {
+        return true;
+    }
+
+    // console.log(pass.length);
 }
 
 // fin espacio para validacion de campo Contraseña
 
 // module.exports = {
 //     checkContrasena,
-// }
+//
