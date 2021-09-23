@@ -279,7 +279,7 @@ form input[type="submit" i].form-btn-enviar:hover {
 
 /* validacion de campo contrasena */
 
-.passSpan {
+.formAlert {
     color: var(--danger);
     font-size: 0.7em;
 }
