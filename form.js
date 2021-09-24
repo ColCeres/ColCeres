@@ -10,15 +10,22 @@ function validateForm(event) { //funcion que llama a las funciones que van a val
 
     event.preventDefault(); // funcion que suspende el evento submit para que no se ejecute y asi validar los campos
 
+    document.getElementById('nomSpan').innerHTML = ""; // limpia el span de la alerta
+    document.getElementById('telSpan').innerHTML = ""; // limpia el span de la alerta
+    document.getElementById('telSpan').innerHTML = ""; // limpia el span de la alerta
+    document.getElementById('dirSpan').innerHTML = ""; // limpia el span de la alerta
     document.getElementById('mailSpan').innerHTML = ""; // limpia el span de la alerta
     document.getElementById('passSpan').innerHTML = ""; // limpia el span de la alerta
 
     // en este espacio se pondran las variables que van a recibir el true o false de las funciones que evaluan los campos del formulario
 
-    var mail = checkCorreo(document.getElementById("correo").value); // variable que guarda el valor de true o false de validacion de correo
     var contrasena = checkContrasena(document.getElementById("contrasena").value); // variable que guarda el valor true o false de la validacion de los campos
+    var mail = checkCorreo(document.getElementById("correo").value); // variable que guarda el valor de true o false de validacion de correo
+    var dir = checkDir(document.getElementById("direccion").value); // variable que guarda el valor true o false de la validacion de los campos
+    var tel = checkTelefono(document.getElementById("telefono").value); // variable que guarda el valor true o false de la validacion de los campos
+    var nom = checkNombre(document.getElementById("nombre").value); // variable que guarda el valor true o false de la validacion de los campos
 
-    if (mail && contrasena) { // condicional que evalua si las variables son true y asi activar el evento submit del form
+    if (nom && tel && dir && mail && contrasena) { // condicional que evalua si las variables son true y asi activar el evento submit del form
         this.submit();
     }
 }
@@ -26,21 +33,64 @@ function validateForm(event) { //funcion que llama a las funciones que van a val
 // fin de espacio para medoto principal
 
 // espacio para validacion de campo Nombre
+function checkNombre(nom) {
+    const nomReg = /^([a-zA-Z ]){4,30}$/;
+    console.log("Test Nombre: " + nomReg.test(nom));
+    // console.log(nom.length);
+
+    if (!nomReg.test(nom)) {
+        document.getElementById('nomSpan').innerHTML = "Por favor verifique el nombre, minimo 4, maximo 30 y sin números.";
+        document.getElementById('nombre').focus();
+        console.log("[ERR Registro - Nombre]", "Por favor verifique el nombre, minimo 4, maximo 30 y sin números.");
+        return false;
+    } else {
+        return true;
+    }
+}
 
 // fin espacio para validacion de campo Nombre
 
 // espacio para validacion de campo Telefono
+function checkTelefono(tel) {
+
+    const telReg = /^([0-9]){7,7}$/;
+    console.log("Test Telefono: " + telReg.test(tel));
+
+    if (!telReg.test(tel)) {
+        document.getElementById('telSpan').innerHTML = "Por favor verifique el numero ingresado, solo admite numeros y 7 digitos.";
+        document.getElementById('telefono').focus();
+        console.log("[ERR Registro - Telefono]", "Por favor verifique el numero ingresado, solo admite numeros y 7 digitos.");
+        return false;
+    } else {
+        return true;
+    }
+}
 
 // fin espacio para validacion de campo Telefono
 
 // espacio para validacion de campo Direccion
+
+function checkDir(dir) {
+
+    const dirReg = /^([0-9a-zA-Z #-]){1,50}$/;
+    console.log("Test Dir: " + dirReg.test(dir));
+
+    if (!dirReg.test(dir)) {
+        document.getElementById('dirSpan').innerHTML = "Por favor verifique la dirección, debe tener máximo 50 caracteres y solo # y - como especiales.";
+        document.getElementById('direccion').focus();
+        console.log("[ERR Registro - Direccion]", "Por favor verifique la dirección, debe tener máximo 50 caracteres y solo # y - como especiales.");
+        return false;
+    } else {
+        return true;
+    }
+}
 
 // fin espacio para validacion de campo Direccion
 
 // espacio para validacion de campo Correo
 function checkCorreo(mail) {
 
-    const regMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    const regMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,8})+$/;
     console.log("Test Mail: " + regMail.test(mail));
 
     if (!regMail.test(mail)) {
@@ -77,5 +127,9 @@ function checkContrasena(pass) { //funcion de validacion de contrasena
 // fin espacio para validacion de campo Contraseña
 
 // module.exports = {
-//     checkContrasena,
-//}
+//     checkNombre,
+//     checkTelefono,
+//     checkDir,
+//     checkCorreo,
+//     checkContrasena
+// }

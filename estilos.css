@@ -277,7 +277,7 @@ form input[type="submit" i].form-btn-enviar:hover {
 /**************************** seccion de validacion de formulario sprint 2 **********************************/
 
 
-/* validacion de campo contrasena */
+/* validacion de campos del form */
 
 .formAlert {
     color: var(--danger);
@@ -285,4 +285,4 @@ form input[type="submit" i].form-btn-enviar:hover {
 }
 
 
-/* fin validacion de campo contrasena */
+/* fin validacion de campos del form */

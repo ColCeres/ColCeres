@@ -60,28 +60,29 @@
             </div>
             <div class="form-seccion">
                 <label for="nombre" class="lblNombre">Nombre</label><br>
-                <input type="text" name="nombre" id="nombre" class="form-input">
-
+                <input type="text" name="nombre" id="nombre" class="form-input"><br>
+                <span id="nomSpan" class="formAlert"></span>
             </div>
             <div class="form-seccion">
                 <label>Género</label><br>
-                <input type="radio" name="genero" id="M" value="masculino" class="form-radio">
+                <input type="radio" name="genero" id="M" value="masculino" class="form-radio" required>
                 <label for="M">M</label>
-                <input type="radio" name="genero" id="F" value="femenino" class="form-radio">
+                <input type="radio" name="genero" id="F" value="femenino" class="form-radio" required>
                 <label for="F">F</label>
-
             </div>
             <div class="form-seccion">
                 <label for="telefono">Teléfono</label><br>
-                <input type="tel" name="telefono" id="telefono" class="form-input">
+                <input type="tel" name="telefono" id="telefono" class="form-input"><br>
+                <span id="telSpan" class="formAlert"></span>
             </div>
             <div class="form-seccion">
                 <label for="direccion">Dirección</label><br>
-                <input type="text" name="direccion" id="direccion" class="form-input">
+                <input type="text" name="direccion" id="direccion" class="form-input"><br>
+                <span id="dirSpan" class="formAlert"></span>
             </div>
             <div class="form-seccion">
                 <label for="correo">Correo</label><br>
-                <input type="email" name="correo" id="correo" class="form-input"><br>
+                <input type="text" name="correo" id="correo" class="form-input"><br>
                 <span id="mailSpan" class="formAlert"></span>
             </div>
             <div class="form-seccion">
