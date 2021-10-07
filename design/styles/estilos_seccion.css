@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: #1B4332;
+}
+
+.text_vendidos{
+    margin-bottom: 80px;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    
+}
+
+.imagen_vendidos{
+    aspect-ratio: none;
+}
+
+.Imagen_precio{
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.Imagen_texto{
+    color: #081C15;
+    margin-bottom: 15px;
+}
+.Imagen_boton{
+    font-size: 18px;
+    background-color: #52B788;
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Imagen_boton_contenedor{
+    margin-bottom: 100px;
+}
+
+.imagen_sep{
+    margin-bottom: 36px;
+}
+
+.text_categorias_info{
+    font-size: 24px;
+    color: #1B4332;
+    margin-bottom: 50px;
+}
+
+article.categorias{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}

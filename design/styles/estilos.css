@@ -2,7 +2,7 @@
 :root {
     /* --primary: #52B788; */
     --primary: #03140c;
-    
+    --header: #52B788;
     --secundary: #56a50d;
     --lightBlue: #1B4332;
     --info: #A8DADC;
@@ -80,7 +80,7 @@ img {
 .header {
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: var(--primary);
+    background-color: var(--header);
     padding: 14px 40px;
     text-align: start;
     color: var(--white);
@@ -89,7 +89,7 @@ img {
 .header-logo {
     text-align: start;
     margin-left: 50px;
-    font-size: 18px;
+    font-size: 36px;
     padding: 13px;
 }
 
@@ -214,10 +214,13 @@ div.header-logo {
 
 
 /* Breadcumb Area CSS */
-
+.segundo_color{
+    background-color: #081C15;
+}
 .breadcumb-area {
      /* position: relative;
     line-height: 1; */
+    margin-top: 25px;
     height: 450px;
     background-image: url(../images/banner-principal.png);
   
