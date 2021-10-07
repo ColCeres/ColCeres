@@ -1,10 +1,11 @@
+'use strict';
 
 var send = document.getElementById("btn-submit-form");
 var person = [];
 
 send.addEventListener('click', function registro() {
 
-    agregarRegistro();
+    agregarRegistro(person);
 
 });
 
@@ -39,12 +40,13 @@ function agregarRegistro() {
 
     person.push(person_add);
     console.log(person);
+    return person;
 
 }
 
 function ordenarArreglo() {
 
-
+   
 
     person.sort(function (a, b) {
         if (a.nombre > b.nombre) {
@@ -58,9 +60,9 @@ function ordenarArreglo() {
         ;
     });
     
-    console.log(person);
+    // console.log(person);
 
-
+    return person;
 
 }
 
@@ -68,7 +70,7 @@ function ordenarArreglo() {
 
 
 function filtrarCorreo() {
-
+    
     // Creo un arreglo para agregar a las perosnas que tengan un correo "@gmail.com"
     var new_person = [];
     // Recorro arreglo para buscar los correos que terminen en "@gmail.com"
@@ -86,15 +88,19 @@ function filtrarCorreo() {
 
     }
 
-    console.log(new_person);
+    // console.log(new_person);
+    return new_person;
 
 }
 
 
+// module.exports = agregarRegistro;
+// module.exports = ordenarArreglo;
 // module.exports = filtrarCorreo;
 
-// module.exports = {
-//     agregarRegistro,
-//     ordenarArreglo,
-//     filtrarCorreo
-// }
+
+module.exports = {
+    agregarRegistro,
+    ordenarArreglo,
+    filtrarCorreo
+}

@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 :root {
-    --primary: #1d3557;
-    --secundary: #73C6B6;
-    --lightBlue: #457B9D;
+    /* --primary: #52B788; */
+    --primary: #03140c;
+    
+    --secundary: #56a50d;
+    --lightBlue: #1B4332;
     --info: #A8DADC;
     --danger: #E63946;
     --success: hsl(145, 64%, 43%);
@@ -14,10 +16,66 @@
 * {
     margin: 0;
     padding: 0;
-    /* color: var(--dark); */
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
+
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #1B4332;
+}
+
+
+/* Base CSS */
+
+
+body {
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: var(--lightBlue);
+ 
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Seccion de header */
@@ -38,6 +96,10 @@
     padding: 13px;
 }
 
+div.header-logo {
+    color: var(--white);
+}
+
 
 /* FIN de Seccion de header */
 
@@ -52,6 +114,10 @@
 .nav>.nav-btn {
     display: none;
 }
+
+/* .logo {
+    background-image: url(../images/logo-colceres.png);
+} */
 
 .nav>.nav-links {
     font-size: 18px;
@@ -77,7 +143,7 @@
 
 @media (max-width:900px) {
     .header {
-        padding: 14px 0px;
+        padding: 14.5px 0px;
     }
     .header-logo {
         text-align: start;
@@ -139,7 +205,242 @@
 }
 
 
+
+
 /* FIN de Seccion de nav */
+
+.separator-verde {
+    background-color: var(--lightBlue);
+    padding: 15px;
+
+}
+
+
+/* Breadcumb Area CSS */
+
+.breadcumb-area {
+     /* position: relative;
+    line-height: 1; */
+    height: 450px;
+    background-image: url(../images/banner-principal.png);
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.breadcumb-content {
+    padding-top: 100px;
+}
+
+.breadcumb-content h2 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    position: absolute;
+}
+
+.breadcumb-content h2 a {
+
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    margin-top: 80px;
+    text-decoration: none;
+    /* margin-left: 50px; */
+    /* position: absolute; */
+    position: inherit;
+}
+
+/* Se guarda las test xd*/
+/* .breadcumb-area:before {
+    width: calc(50% - 112px);
+    height: 74%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+} */
+
+
+/* .breadcumb-area:before {
+    width: calc(50% - 112px);
+    height: 100%;
+    top: 50;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+} */
+
+
+.breadcumb-area:before {
+
+    width: calc(50% - 112px);
+    height: 450px;
+    top: 50;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(3, 20, 12, 0.5);
+    content: "";
+    position: absolute;
+}
+
+.main--img-container {
+    display: grid;
+    align-content: center;
+    top: 80px;
+}
+
+
+
+
+
+
+
+/***TES TES TES***/
+
+
+
+/***TES TEST TEST***/
+
+
+/***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** ESTILOS BRAHIAN *******/
+
+h2.text_vendidos {
+    padding-top: 50px;
+}
+
+h2.text_categorias {
+    padding-top: 50px;
+}
+
+p {
+    font-size: 30px;
+    text-align: center;
+    color: #1B4332;
+}
+
+p.text_categorias-info {
+    padding: 15px;
+}
+
+
+/* .text_vendidos{
+    margin-bottom: 80px;
+} */
+
+article{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    
+}
+
+img.Imagen-vendidos {
+    display: block;
+    margin: auto;
+}
+
+div.s_vendidos {
+    text-align: center !important;
+}
+
+.Imagen-precio{
+    font-size: 24px;
+    margin-top: 5px;
+}
+.Imagen-texto{
+    color: #081C15;
+    margin-bottom: 15px;
+}
+.Imagen-boton{
+    font-size: 18px;
+    background-color: var(--secundary);
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.Imagen-boton-contenedor{
+    margin-bottom: 60px;
+    margin-top: 30px;
+    
+}
+
+
+
+
+.text_categorias-info{
+    font-size: 24px;
+    color: #1B4332;
+ 
+}
+
+article.categorias{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+
+div.imagen-categorias-contenedor {
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+/******************************************/
 
 
 /* Seccion de button nav */
@@ -148,26 +449,10 @@
 /* Botón de registro dentro del menú hamburguesa */
 
 .button-registrar {
-    /* border: 1px solid var(--secundary); */
-    border: none;
-    /* Anchura, estilo y color borde */
-    padding: 13px;
-    /* Espacio alrededor texto */
+    padding: 15px;
     background-color: var(--secundary);
-    /*color botón*/
-    /* color: var(--primary); */
-    /* Color texto */
-    font-family: 'Lato', sans-serif;
-    /* Tipografía texto */
-    border-radius: 50px;
-    /* Bordes redondos */
-    /* margin: 20%; */
-    /* Alineación del margen */
-    /* float: right; */
-    /* margin: 50px; */
-    font-size: 18px;
-    box-shadow: 2px 4px 5px var(--primary);
-    /* width: 100px; */
+    border-radius: 10px;
+    /* position: absolute; */
 }
 
 a.btn-registrar {
@@ -272,3 +557,38 @@ form input[type="submit" i].form-btn-enviar:hover {
 
 
 /* FIN de Seccion de boton del form */
+
+
+
+
+/* FOOTER */
+
+.footer {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: var(--primary)  ;
+    padding: 90px;
+    text-align: center;
+}
+
+
+footer.footer h2 {
+    color: #fff;
+}
+
+
+
+.info--icon-container .redes {
+    color: white;
+    width: 45px;
+    height: 45px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+
+
+a>i.redes:hover{
+    color: var(--secundary) !important;
+}
