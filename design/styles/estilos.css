@@ -75,9 +75,6 @@ img {
 
 
 
-
-
-
 /* Seccion de header */
 
 .header {
@@ -443,7 +440,37 @@ div.imagen-categorias-contenedor {
 /******************************************/
 
 
-/* Seccion de button nav */
+/* Seccion FORMULARIO */
+
+
+
+main.contact {
+    display: grid;
+    /* height: 60vh; */
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    padding-top: 0;
+    /* padding: 40px; */
+}
+
+
+.main--lottie-container {
+    text-align: left;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.main-form-container {
+    text-align: right;
+    padding: 25px;
+    margin-top: 50px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: end;
+ 
+}
+
+
 
 
 /* Botón de registro dentro del menú hamburguesa */
@@ -474,7 +501,7 @@ a.btn-registrar {
 
 section.section-form {
     padding: 20px;
-    background-color: var(--lightBlue);
+   
 }
 
 form.form-registro {
@@ -484,11 +511,11 @@ form.form-registro {
     margin: auto;
     border-radius: 10px;
     box-shadow: 4px 4px 6px var(--dark);
-    padding: 0 20px 20px;
+    padding: 20px 20px;
 }
 
 form.form-registro label {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 form div.form-header {
@@ -529,10 +556,10 @@ input[type="radio" i].form-radio {
 
 /* Seccion de boton del form */
 
-form input[type="submit" i].form-btn-enviar {
-    /* position: relative; */
+/* form input[type="submit" i].form-btn-enviar {
+  
     display: block;
-    /* background-color: var(--success); */
+  
     background-color: var(--secundary);
     color: var(--white);
     border: none;
@@ -549,11 +576,11 @@ form input[type="submit" i].form-btn-enviar {
 }
 
 form input[type="submit" i].form-btn-enviar:hover {
-    /* background-color: var(--secundary); */
-    background-color: var(--success);
+ 
+    background-color: var(--secundary);
     color: var(--primary);
     transform: scale(1.2);
-}
+} */
 
 
 /* FIN de Seccion de boton del form */
