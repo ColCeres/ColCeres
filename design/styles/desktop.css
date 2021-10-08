@@ -706,7 +706,6 @@ input[type="radio" i].form-radio {
     margin: 0 auto;
     cursor: pointer;
 }
-
 form input[type="submit" i].form-btn-enviar:hover {
  
     background-color: var(--secundary);
