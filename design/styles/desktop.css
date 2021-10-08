@@ -1,0 +1,753 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+
+:root {
+    /* --primary: #52B788; */
+    --primary: #03140c;
+    --secundary: #56a50d;
+    --lightBlue: #1B4332;
+
+    --button: #2e5f00;
+
+    --info: #A8DADC;
+    --danger: #E63946;
+    --success: hsl(145, 64%, 43%);
+    --warning: #FFA726;
+    --white: #fff;
+    --dark: #212121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    color: var(--secundary) !important;
+}
+
+p {
+    font-size: 26px;
+    text-align: center;
+    color: #1B4332;
+    padding: 15px 0px;
+}
+
+
+
+
+/* Base CSS */
+
+
+body {
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: var(--lightBlue);
+ 
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seccion de header */
+
+.header {
+    position: fixed; /* xdxd fijar */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--primary);
+    padding: 14px 40px;
+    text-align: start;
+    color: var(--white);
+    
+}
+
+.header-logo {
+    text-align: start;
+    margin-left: 50px;
+    font-size: 18px;
+    padding: 13px;
+}
+
+div.header-logo {
+    color: var(--white);
+}
+
+
+/* FIN de Seccion de header */
+
+
+/* Seccion de nav */
+
+.navbar {
+    text-align: end;
+    margin-right: 50px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+/* .logo {
+    background-image: url(../images/logo-colceres.png);
+} */
+
+.nav>.nav-links {
+    font-size: 18px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav>.nav-links>a:hover {
+    color: var(--secundary);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+
+/* Navbar en movil o con pantalla menor a 900px */
+
+@media (max-width:900px) {
+    .header {
+        padding: 14.5px 0px;
+    }
+    .header-logo {
+        text-align: start;
+        margin-left: 13px;
+        padding: 0px;
+    }
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 49px;
+        padding: 13px;
+    }
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: var(--lightBlue);
+    }
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid white;
+    }
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: var(--lightBlue);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden !important;
+        top: 49px;
+        left: 0px;
+    }
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 49px);
+        overflow-y: auto;
+    }
+    .button-registrar {
+        display: block;
+        padding: 13px 10px;
+        text-align: center;
+        /* width: 100%; */
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* FIN de Seccion de nav */
+
+.separator-verde {
+    background-color: var(--lightBlue);
+    padding: 15px;
+
+}
+
+
+/* Breadcumb Area CSS */
+
+.breadcumb-area {
+     /* position: relative;
+    line-height: 1; */
+    height: 450px;
+    background-image: url(../images/banner-principal.png);
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.breadcumb-content {
+    padding-top: 100px;
+}
+
+.breadcumb-content h2 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    position: absolute;
+}
+
+.breadcumb-content h2 a {
+
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    margin-top: 80px;
+    text-decoration: none;
+    /* margin-left: 50px; */
+    /* position: absolute; */
+    position: inherit;
+}
+
+/* Se guarda las test xd*/
+/* .breadcumb-area:before {
+    width: calc(50% - 112px);
+    height: 74%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+} */
+
+
+/* .breadcumb-area:before {
+    width: calc(50% - 112px);
+    height: 100%;
+    top: 50;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+} */
+
+
+.breadcumb-area:before {
+
+    width: calc(50% - 112px);
+    height: 450px;
+    top: 50;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(3, 20, 12, 0.5);
+    content: "";
+    position: absolute;
+}
+
+.main--img-container {
+    display: grid;
+    align-content: center;
+    top: 80px;
+}
+
+
+
+
+
+
+
+/***TES TES TES***/
+
+
+
+/***TES TEST TEST***/
+
+
+/***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** ESTILOS BRAHIAN *******/
+
+h2.text_vendidos {
+    padding-top: 50px;
+}
+
+h2.text_categorias {
+    padding-top: 50px;
+}
+
+
+p.text_categorias-info {
+    padding: 15px;
+}
+
+
+/* .text_vendidos{
+    margin-bottom: 80px;
+} */
+
+article{
+    display: grid;
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+img.Imagen-vendidos {
+    display: block;
+    margin: auto;
+}
+
+div.s_vendidos {
+    padding: 50px 40px;
+    text-align: center !important;
+    border-bottom: 3px solid var(--secundary);
+}
+
+.Imagen-precio{
+    font-size: 24px;
+    margin-top: 5px;
+}
+.Imagen-texto{
+    color: #081C15;
+    margin-bottom: 15px;
+}
+.Imagen-boton{
+    font-size: 18px;
+    background-color: var(--button);
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.Imagen-boton-contenedor{
+    margin-bottom: 60px;
+    margin-top: 30px;
+    
+}
+
+
+
+
+.text_categorias-info{
+    font-size: 24px;
+    color: #1B4332;
+ 
+}
+
+article.categorias{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 0 40px;
+}
+
+
+div.imagen-categorias-contenedor {
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+/******************************************/
+
+/*** Main index **/
+
+
+
+main.main-colceres {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    padding-top: 0;
+    padding: 40px;
+}
+
+
+.main--colceres-lottie {
+    text-align: left;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.main--colceres-container {
+    text-align: right;
+    padding: 25px;
+    margin-top: 130px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    justify-self: end;
+    text-align: start;
+ 
+}
+
+.main--colceres-container > p {
+    text-align: start;
+}
+
+.main--colceres-container > h2 {
+    text-align: start;
+}
+
+.main--colceres-container > p.registrar {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* List pa destacar */
+
+.check-list {
+    margin: 0;
+    padding-left: 2.2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .check-list li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 1.3rem;
+    margin-bottom: 0.2rem;
+    text-align: start;
+  }
+  
+  .check-list li:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 12px;
+      width: 5px;
+      height: 11px;
+      border-width: 0 4px 4px 0;
+      border-style: solid;
+      border-color: var(--secundary);
+      transform-origin: bottom left;
+      transform: rotate(45deg);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seccion FORMULARIO */
+
+
+
+main.contact {
+    display: grid;
+    /* height: 60vh; */
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    padding-top: 0;
+    /* padding: 40px; */
+}
+
+
+.main--lottie-container {
+    text-align: left;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.main-form-container {
+    text-align: right;
+    padding: 25px;
+    margin-top: 50px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: end;
+ 
+}
+
+
+
+
+/* Botón de registro dentro del menú hamburguesa */
+
+.button-registrar {
+    padding-top: 20px;
+    padding: 15px;
+    /* background-color: var(--secundary); */
+    background-color: var(--button);
+
+    border-radius: 5px;
+    /* position: absolute; */
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+a.btn-registrar {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.btn-registrar:hover {
+    /* background-color: var(--info); */
+    color: var(--white) !important;
+}
+
+
+/* FIN de Seccion de button nav */
+
+
+/* Seccion de form */
+
+section.section-form {
+    padding: 20px;
+   
+}
+
+form.form-registro {
+    background-color: var(--white);
+    border: 1px solid rgba(165, 165, 165, 0.198);
+    max-width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px var(--dark);
+    padding: 20px 20px;
+}
+
+form.form-registro label {
+    font-weight: 700;
+}
+
+form div.form-header {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid rgba(165, 165, 165, 0.198);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+form div.form-seccion {
+    margin: 15px 0;
+    padding-top: 5px;
+}
+
+.form-input {
+    background-color: var(--white);
+    border-radius: 5px;
+    border-color: var(--primary);
+    border-style: solid;
+    width: 90%;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.form-input:focus {
+    background-color: rgba(211, 211, 211, 0.13);
+}
+
+input[type="radio" i].form-radio {
+    margin: 5px;
+    margin-top: 10px;
+}
+
+
+/* FIN de Seccion de form */
+
+
+/* Seccion de boton del form */
+
+/* form input[type="submit" i].form-btn-enviar {
+  
+    display: block;
+  
+    background-color: var(--secundary);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    left: 30%;
+    box-shadow: 3px 3px 4px var(--dark);
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: 500ms;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+form input[type="submit" i].form-btn-enviar:hover {
+ 
+    background-color: var(--secundary);
+    color: var(--primary);
+    transform: scale(1.2);
+} */
+
+
+/* FIN de Seccion de boton del form */
+
+
+
+
+/* FOOTER */
+
+.footer {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: var(--primary)  ;
+    padding: 90px;
+    text-align: center;
+}
+
+
+footer.footer h2 {
+    color: #fff;
+}
+
+
+
+.info--icon-container .redes {
+    color: white;
+    width: 45px;
+    height: 45px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+
+
+a>i.redes:hover{
+    color: var(--secundary) !important;
+}
