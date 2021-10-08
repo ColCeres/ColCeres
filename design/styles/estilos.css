@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+
 :root {
     /* --primary: #52B788; */
     --primary: #03140c;
-    
     --secundary: #56a50d;
     --lightBlue: #1B4332;
+
+    --button: #2e5f00;
+
     --info: #A8DADC;
     --danger: #E63946;
     --success: hsl(145, 64%, 43%);
@@ -16,7 +23,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     box-sizing: border-box;
 }
 
@@ -24,8 +31,17 @@
 h2 {
     font-size: 36px;
     text-align: center;
-    color: #1B4332;
+    color: var(--secundary) !important;
 }
+
+p {
+    font-size: 26px;
+    text-align: center;
+    color: #1B4332;
+    padding: 15px 0px;
+}
+
+
 
 
 /* Base CSS */
@@ -78,12 +94,15 @@ img {
 /* Seccion de header */
 
 .header {
+    position: fixed; /* xdxd fijar */
+    width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: var(--primary);
     padding: 14px 40px;
     text-align: start;
     color: var(--white);
+    
 }
 
 .header-logo {
@@ -356,11 +375,6 @@ h2.text_categorias {
     padding-top: 50px;
 }
 
-p {
-    font-size: 30px;
-    text-align: center;
-    color: #1B4332;
-}
 
 p.text_categorias-info {
     padding: 15px;
@@ -373,8 +387,8 @@ p.text_categorias-info {
 
 article{
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 img.Imagen-vendidos {
@@ -383,7 +397,9 @@ img.Imagen-vendidos {
 }
 
 div.s_vendidos {
+    padding: 50px 40px;
     text-align: center !important;
+    border-bottom: 3px solid var(--secundary);
 }
 
 .Imagen-precio{
@@ -396,7 +412,7 @@ div.s_vendidos {
 }
 .Imagen-boton{
     font-size: 18px;
-    background-color: var(--secundary);
+    background-color: var(--button);
     border-radius: 5px;
     padding: 10px 10px;
     text-decoration: none;
@@ -422,6 +438,7 @@ div.s_vendidos {
 article.categorias{
     display: grid;
     grid-template-columns: 33% 33% 33%;
+    padding: 0 40px;
 }
 
 
@@ -438,6 +455,115 @@ div.imagen-categorias-contenedor {
 
 
 /******************************************/
+
+/*** Main index **/
+
+
+
+main.main-colceres {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    padding-top: 0;
+    padding: 40px;
+}
+
+
+.main--colceres-lottie {
+    text-align: left;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.main--colceres-container {
+    text-align: right;
+    padding: 25px;
+    margin-top: 130px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    justify-self: end;
+    text-align: start;
+ 
+}
+
+.main--colceres-container > p {
+    text-align: start;
+}
+
+.main--colceres-container > h2 {
+    text-align: start;
+}
+
+.main--colceres-container > p.registrar {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* List pa destacar */
+
+.check-list {
+    margin: 0;
+    padding-left: 2.2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .check-list li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 1.3rem;
+    margin-bottom: 0.2rem;
+    text-align: start;
+  }
+  
+  .check-list li:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 12px;
+      width: 5px;
+      height: 11px;
+      border-width: 0 4px 4px 0;
+      border-style: solid;
+      border-color: var(--secundary);
+      transform-origin: bottom left;
+      transform: rotate(45deg);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Seccion FORMULARIO */
@@ -476,10 +602,16 @@ main.contact {
 /* Botón de registro dentro del menú hamburguesa */
 
 .button-registrar {
+    padding-top: 20px;
     padding: 15px;
-    background-color: var(--secundary);
-    border-radius: 10px;
+    /* background-color: var(--secundary); */
+    background-color: var(--button);
+
+    border-radius: 5px;
     /* position: absolute; */
+    text-align: center;
+    text-decoration: none;
+    color: white;
 }
 
 a.btn-registrar {
