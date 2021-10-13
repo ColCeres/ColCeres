@@ -250,10 +250,25 @@ div.imagen-categorias-contenedor {
 
 
 
+div.main-form {
+    display: inherit !important;
+    grid-template-columns: inherit !important;
+    
+    background-color: var(--info);
+}
 
 
 
+div.lottie-form {
+    display: grid;
+    grid-template-columns: 100% !important;
+    padding: 0 20px;
+}
 
+div.form {
+    display: grid;
+    grid-template-columns: 100% !important;
+}
 
 
 
@@ -434,13 +449,13 @@ main.main-colceres {
 
 .main--colceres-lottie {
     text-align: left;
-    padding: 25px;
+
     margin-top: 50px;
 }
 
 .main--colceres-container {
     text-align: right;
-    padding: 25px;
+
     margin-top: 130px;
     grid-column-start: 2;
     grid-row-start: 1;
@@ -503,14 +518,6 @@ main.main-colceres {
 
 
 
-main.contact {
-    display: grid;
-    /* height: 60vh; */
-    grid-template-columns: 50% 50%;
-    align-content: center;
-    padding-top: 0;
-    /* padding: 40px; */
-}
 
 
 .main--lottie-container {
