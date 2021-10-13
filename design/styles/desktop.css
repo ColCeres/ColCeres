@@ -193,7 +193,7 @@ p.text_categorias-info {
 
 article{
     display: grid;
-    grid-template-columns: 25% 25% 25% 25% !important;
+    grid-template-columns: 33.3% 33.3% 33.3% !important;
 }
 
 
