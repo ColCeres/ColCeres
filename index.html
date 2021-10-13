@@ -154,7 +154,8 @@
 
                 <div class="imagen-vendidos-contenedor" id="imagen-vendidos-contenedor">
                     <img class="imagen_vendidos" id="imagen_vendidos-piña"
-                        src="./design/images/images-productos/fruta/Mandarina.jpg" alt="Imagen de Piña" width="auto" height="200">
+                        src="./design/images/images-productos/fruta/Mandarina.jpg" alt="Imagen de Piña" width="auto"
+                        height="200">
                     <p class="Imagen-texto">Mandarina</p>
                     <p class="Imagen-precio">$3.315 (und)</p>
                     <div class="Imagen-boton-contenedor"><a class="Imagen-boton" href="#">Comprar</a></div>
@@ -200,7 +201,8 @@
 
                 <div class="imagen-vendidos-contenedor" id="imagen-vendidos-contenedor">
                     <img class="imagen_vendidos" id="imagen_vendidos-piña"
-                        src="./design/images/images-productos/fruta/Aguacate.jpg" alt="Imagen de Piña" width="auto" height="200">
+                        src="./design/images/images-productos/fruta/Aguacate.jpg" alt="Imagen de Piña" width="auto"
+                        height="200">
                     <p class="Imagen-texto">Aguacate</p>
                     <p class="Imagen-precio">$3.315 (und)</p>
                     <div class="Imagen-boton-contenedor"><a class="Imagen-boton" href="#">Comprar</a></div>
@@ -230,8 +232,8 @@
 
                 <div class="imagen-vendidos-contenedor" id="imagen-vendidos-contenedor">
                     <img class="imagen_vendidos" id="imagen_vendidos-banano"
-                        src="./design/images/images-productos/verduras/Tomate.jpg" alt="Imagen de un banano" width="auto"
-                        height="200">
+                        src="./design/images/images-productos/verduras/Tomate.jpg" alt="Imagen de un banano"
+                        width="auto" height="200">
                     <p class="Imagen-texto">Tomate</p>
                     <p class="Imagen-precio">$1.900 (und)</p>
                     <div class="Imagen-boton-contenedor"><a class="Imagen-boton" href="#">Comprar</a></div>
@@ -312,7 +314,8 @@
 
         <div class="lottie-form">
 
-            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_9qqzSo.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop autoplay></lottie-player>
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_9qqzSo.json" background="transparent"
+                speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
 
         </div>
 
@@ -325,111 +328,88 @@
             <h2>Regístrate</h2>
             <p>¡Únete a Colceres, descubre lo que tenemos para ti!</p>
             <hr>
-            <form action="" class="formulario_reg" id="formulario_reg">
+            <form action="#" method="#" class="formulario_reg" id="form-registro">
+                
                 <div class="formulario__grupo " id="formulario--nombre">
+
+
+
                     <!-- Grupo: Nombre-->
                     <label for="nombrejuego" class="formulario__label" id="formulario__label">Nombre</label>
                     <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" id="formulario__input-nombre" name="nombrejuego"
-                            placeholder="Pepito">
-                       
+                        <input type="text" class="formulario__input" id="nombre" name="nombrejuego"
+                            placeholder="Pepito Perez">
+                            <span id="nomSpan" class="formAlert"></span>
                     </div>
-                    <div>
-                        <p class="formulario__grupo-input-error">Recuerde que el nombre no debe contener caracteres
-                            especiales ni números, y debe tener al menos dos letras.</p>
+
+
+                    <div class="formulario__grupo">
+                        <label class="formulario__label">Género</label><br>
+                        <input type="radio" name="genero" id="M" value="masculino" class="form-radio" required>
+                        <label for="M">M</label>
+                        <input type="radio" name="genero" id="F" value="femenino" class="form-radio" required>
+                        <label for="F">F</label>
+                    </div>
+
+
+                    <!--Grupo: Telefono-->
+                    <div class="formulario__grupo" id="formulario--telefono">
+                        <label for="telefono" class="formulario__label" id="formulario__label">Teléfono </label>
+                        <div class="formulario__grupo-input">
+                            <input type="tel" class="formulario__input" id="telefono" name="telefono"
+                                placeholder="6012291170">
+                                <span id="telSpan" class="formAlert"></span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="formulario__grupo" id="formulario--contrato">
+                        <label for="contrato" class="formulario__label" id="formulario__label">Dirección </label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" id="direccion" name="contrato"
+                                placeholder="Perez">
+                                <span id="dirSpan" class="formAlert"></span>
+                        </div>
+                    </div>
+
+
+                    <!--Grupo: Email-->
+                    <div class="formulario__grupo" id="formulario--email">
+                        <label for="email" class="formulario__label" id="formulario__label">Correo </label>
+                        <div class="formulario__grupo-input">
+                            <input type="email" class="formulario__input" id="correo" name="email"
+                                placeholder="colceres@gmail.com">
+                                <span id="mailSpan" class="formAlert"></span>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!--Grupo: Contraseña-->
+                    <div class="formulario__grupo" id="formulario--password">
+                        <label for="password" class="formulario__label" id="formulario__label">Contraseña </label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="password" id="contrasena"
+                                placeholder="********">
+                                <span id="passSpan" class="formAlert"></span>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!--Envio exitoso-->
+                    <div class="formulario__grupo" id="formulario--btn--enviar">
+                        <button type="submit" class="button-registrar formulario--btn" id="btn-submit-form"
+                            value="Enviar">Enviar</button>
+                        <p class="formulario--exito" id="formulario--exito"> Formulario enviado exitosamente. </p>
                     </div>
                 </div>
-
-                <!--Grupo: Apellido-->
-                <div class="formulario__grupo" id="formulario--contrato">
-                    <label for="contrato" class="formulario__label" id="formulario__label">Apellido </label>
-                    <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" id="formulario__input-contrato" name="contrato"
-                            placeholder="Perez">
-                        <!-- <i class="formulario__icono-validacion fas fa-times-circle"></i> -->
-                    </div>
-                    <div>
-                        <p class="formulario__grupo-input-error">Recuerde que el apellido no debe contener caracteres
-                            especiales ni números, y debe tener al menos tres letras.</p>
-                    </div>
-                </div>
-
-
-                <!--Grupo: Contraseña-->
-                <div class="formulario__grupo" id="formulario--password">
-                    <label for="password" class="formulario__label" id="formulario__label">Contraseña </label>
-                    <div class="formulario__grupo-input">
-                        <input type="password" class="formulario__input" name="password" id="password_1"
-                            placeholder="********">
-            
-                    </div>
-                    <div>
-                        <p class="formulario__grupo-input-error">Su contraseña debe contener al menos 8 caracteres entre
-                            ellos mayusculas, números y carácteres especiales.</p>
-                    </div>
-                </div>
-
-
-                <!--Grupo: Contraseña2-->
-                <div class="formulario__grupo" id="formulario--password2">
-                    <label for="password2" class="formulario__label" id="formulario__label">Repetir contraseña </label>
-                    <div class="formulario__grupo-input">
-                        <input type="password" class="formulario__input" name="password2" id="password_2"
-                            placeholder="********">
-                        
-                    </div>
-                    <div>
-                        <p class="formulario__grupo-input-error">La contraseña no coincide con la agregada
-                            anteriormente.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!--Grupo: Email-->
-                <div class="formulario__grupo" id="formulario--email">
-                    <label for="email" class="formulario__label" id="formulario__label">Correo </label>
-                    <div class="formulario__grupo-input">
-                        <input type="email" class="formulario__input" id="formulario__input-email" name="email"
-                            placeholder="colceres@gmail.com">
-                      
-                    </div>
-                    <div>
-                        <p class="formulario__grupo-input-error">Su correo debe contener un dominio.</p>
-                    </div>
-                </div>
-
-                <!--Grupo: Telefono-->
-                <div class="formulario__grupo" id="formulario--telefono">
-                    <label for="telefono" class="formulario__label" id="formulario__label">Teléfono </label>
-                    <div class="formulario__grupo-input">
-                        <input type="number" class="formulario__input" id="formulario__input-telefono" name="telefono"
-                            placeholder="6012291170">
-                     
-                    </div>
-                    <div>
-                        <p class="formulario__grupo-input-error">Su telefono no puede superar los 12 dígitos.</p>
-                    </div>
-                </div>
-                <!--Terminos y Condiciones-->
-
-                <div class="formulario__grupo" id="formulario--terminos">
-                    <label class="formulario__label">
-                        <input type="checkbox" class="checkbox__terminos" id="checkbox__terminos-input" name="terminos">
-                        Acepto los terminos y Condiciones
-                    </label>
-                </div>
-                <!--Mensaje error-->
-                <div class="formulario__mensaje" id="formulario--mensaje">
-                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error: Por favor llene el formulario antes de
-                            continuar.</b></p>
-                </div>
-                <!--Envio exitoso-->
-                <div class="formulario__grupo" id="formulario--btn--enviar">
-                    <button type="submit" class="button-registrar formulario--btn">Enviar</button>
-                    <p class="formulario--exito" id="formulario--exito"> Formulario enviado exitosamente. </p>
-                </div>
-
             </form>
         </div>
     </div>
