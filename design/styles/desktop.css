@@ -157,14 +157,12 @@ div.header-logo {
         grid-template-columns: inherit !important;
         align-content: center;
         padding-top: 0;
-        padding: 40px;
     }
     
     
     .main--colceres-lottie {
         display: grid !important;
         grid-template-columns: 100% !important;
-        padding: 25px;
         margin-top: 0px !important;
     }
     
@@ -449,13 +447,11 @@ main.main-colceres {
 
 .main--colceres-lottie {
     text-align: left;
-
     margin-top: 50px;
 }
 
 .main--colceres-container {
     text-align: right;
-
     margin-top: 130px;
     grid-column-start: 2;
     grid-row-start: 1;
