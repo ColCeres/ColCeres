@@ -1,0 +1,812 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+
+:root {
+    /* --primary: #52B788; */
+    --primary: #03140c;
+    --secundary: #56a50d;
+    --lightBlue: #1B4332;
+
+    --button: #2e5f00;
+
+    --info: #b7efc5b3;
+
+    --danger: #E63946;
+    --success: hsl(145, 64%, 43%);
+    --warning: #FFA726;
+    --white: #fff;
+    --dark: #212121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    color: var(--secundary) !important;
+
+}
+
+
+h3 {
+    font-size: 26px;
+    text-align: center;
+    color: var(--secundary) !important;
+    padding: 10px;
+
+}
+
+
+p {
+    font-size: 26px;
+    text-align: center;
+    color: #1B4332;
+    padding: 15px 0px;
+}
+
+
+/* Base CSS */
+
+
+body {
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: var(--lightBlue);
+ 
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Seccion de header */
+
+.header {
+    position: fixed; /* xdxd fijar */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--primary);
+    padding: 14px 40px;
+    text-align: start;
+    color: var(--white);
+    z-index: 100;
+    
+}
+
+.header-logo {
+    text-align: start;
+    margin-left: 50px;
+    font-size: 18px;
+    padding: 13px;
+}
+
+div.header-logo {
+    color: var(--white);
+}
+
+
+/* FIN de Seccion de header */
+
+
+/* Seccion de nav */
+
+.navbar {
+    text-align: end;
+    margin-right: 50px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+
+
+.nav>.nav-links {
+    font-size: 18px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav>.nav-links>a:hover {
+    color: var(--secundary);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+
+/* Navbar en movil o con pantalla menor a 900px */
+
+@media (max-width:900px) {
+
+    h2 {
+        font-size: 26px;
+    }
+    
+    p {
+        font-size: 16px;
+     
+    }
+    
+    main.main-colceres {
+        display: inherit !important;
+        grid-template-columns: inherit !important;
+        align-content: center;
+        padding-top: 0;
+    }
+    
+    
+    .main--colceres-lottie {
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        margin-top: 0px !important;
+    }
+    
+    .main--colceres-container {
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        padding: 25px;
+        margin-top: 50px !important;
+
+     
+    }
+
+/***** ESTILOS BRAHIAN *******/
+
+h2.text_vendidos {
+    padding-top: 0px !important;
+}
+
+h2.text_categorias {
+    padding-top: 20px !important;
+}
+
+
+p.text_categorias-info {
+    padding: 0px !important;
+}
+
+
+article{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3% !important;
+}
+
+
+
+
+div.s_vendidos {
+    padding: 20px 20px !important;
+}
+
+.imagen-vendidos-contenedor p {
+    padding: 0px !important;
+}
+
+
+
+.Imagen-precio{
+    font-size: 16px !important;
+
+}
+
+.Imagen-texto{
+    color: #081C15;
+    margin-bottom: 0px !important;
+}
+
+
+
+.Imagen-boton{
+    font-size: 14px !important;
+
+}
+
+
+.text_categorias-info {
+    font-size: 16px !important;
+    margin-top: 15px;
+    
+ 
+}
+
+
+article.categorias{
+    display: grid;
+    grid-template-columns: 50% 50% !important;
+    padding: 0px !important;
+}
+
+
+div.imagen-categorias-contenedor {
+    padding: 20px;
+}
+
+
+
+div.main-form {
+    display: inherit !important;
+    grid-template-columns: inherit !important;
+    
+    background-color: var(--info);
+}
+
+
+
+div.lottie-form {
+    display: grid;
+    grid-template-columns: 100% !important;
+    padding: 0 20px;
+}
+
+div.form {
+    display: grid;
+    grid-template-columns: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+    .header {
+        padding: 14.5px 0px;
+    }
+    .header-logo {
+        text-align: start;
+        margin-left: 13px;
+        padding: 0px;
+    }
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 49px;
+        padding: 13px;
+    }
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: var(--lightBlue);
+    }
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid white;
+    }
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: var(--lightBlue);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden !important;
+        top: 49px;
+        left: 0px;
+    }
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 49px);
+        overflow-y: auto;
+    }
+    .button-registrar {
+        display: block;
+        padding: 13px 10px;
+        text-align: center;
+        /* width: 100%; */
+        margin: 0 auto;
+    }
+}
+
+
+/* .main--img-container {
+    display: grid;
+    align-content: center;
+    top: 80px;
+}
+ */
+
+
+/***** ESTILOS BRAHIAN *******/
+
+h2.text_vendidos {
+    padding-top: 50px;
+}
+
+h2.text_categorias {
+    padding-top: 50px;
+}
+
+
+p.text_categorias-info {
+    padding: 15px;
+}
+
+
+article{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+img.Imagen-vendidos {
+    display: block;
+    margin: auto;
+}
+
+div.s_vendidos {
+    /* padding: 50px 40px; */
+    text-align: center !important;
+ 
+}
+
+.Imagen-precio{
+    font-size: 24px;
+    margin-top: 5px;
+}
+.Imagen-texto{
+    color: #081C15;
+ 
+}
+
+.imagen-vendidos-contenedor p {
+    padding: 0px !important;
+}
+
+
+
+
+.Imagen-boton{
+    font-size: 18px;
+    background-color: var(--button);
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.Imagen-boton-contenedor{
+    margin-bottom: 60px;
+    margin-top: 30px;
+    
+}
+
+.text_categorias-info{
+    font-size: 24px;
+    color: #1B4332;
+ 
+}
+
+article.categorias{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 0 15px;
+}
+
+
+div.imagen-categorias-contenedor {
+    padding: 20px;
+}
+
+
+
+/******************************************/
+
+/*** Main index **/
+
+
+
+main.main-colceres {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    padding-top: 0;
+    padding: 40px;
+}
+
+
+.main--colceres-lottie {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.main--colceres-container {
+    text-align: right;
+    margin-top: 130px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    justify-self: end;
+    text-align: start;
+ 
+}
+
+.main--colceres-container > p {
+    text-align: start;
+}
+
+.main--colceres-container > h2 {
+    text-align: start;
+}
+
+.main--colceres-container > p.registrar {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* List pa destacar */
+
+.check-list {
+    margin: 0;
+    padding-left: 2.2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .check-list li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 1.3rem;
+    margin-bottom: 0.2rem;
+    text-align: start;
+  }
+  
+  .check-list li:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 12px;
+      width: 5px;
+      height: 11px;
+      border-width: 0 4px 4px 0;
+      border-style: solid;
+      border-color: var(--secundary);
+      transform-origin: bottom left;
+      transform: rotate(45deg);
+  }
+
+
+/*******/
+
+
+/* Seccion FORMULARIO */
+
+
+
+
+
+.main--lottie-container {
+    text-align: left;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.main-form-container {
+    text-align: right;
+    padding: 25px;
+    margin-top: 50px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: end;
+ 
+}
+
+
+
+
+/* Botón de registro dentro del menú hamburguesa */
+
+.button-registrar {
+    padding-top: 20px;
+    padding: 15px;
+    background-color: var(--button);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+a.btn-registrar {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.btn-registrar:hover {
+    /* background-color: var(--info); */
+    color: var(--white) !important;
+}
+
+
+
+
+
+
+div.main-form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--info);
+}
+
+
+
+div.form{
+    width: 90%;
+    margin: auto;
+    margin-top: 80px;
+    padding: 0px 20px;
+
+}
+
+
+hr{
+    height: 2px;
+    font-weight: bold;
+    background-color: #000;
+    border-color: #000;
+}
+
+.lineafinal1{
+    margin-bottom: 16px;
+    height: 2px;
+    font-weight: bold;
+    background-color: #000;
+    border-color: #000;
+
+}
+
+.formulario_reg{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.formulario__label{
+    display: block;  /* Abarcar 100% del espacio */
+    font-weight: bold; /* Fuente negrita*/
+    padding: 10px; /* Espacio a los lados*/
+    cursor: pointer; /* Cuando se ponga el cursor encima selecciona el input respectivo*/
+}
+
+.formulario__grupo-input{
+    position: relative; /* Posicionamiento relativo  */
+}
+
+.formulario__input{
+    width: 100%;
+    background-color: #fff;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    height:45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus{
+    border: 3px solid #0075ff;
+    outline: none; /* Quitar subrayado que hacen los browsers*/
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__grupo-input-error{
+    font-size: 12px;  /* Texto mas pequeño*/
+    margin-bottom: 0;  /* Quitar el margen que agrega por defecto al ser un parrafo */
+    display: none;  /* Los mensajes asociados al input-error estarán ocultos*/
+}
+
+.formulario__grupo-input-error-activo{  /*Cuando el error del input este activo se desplega el mensaje*/
+    display: block;
+
+}
+
+.formulario__icono-validacion{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;  /* Asegura que va a estar encima de otros elementos */
+    font-size: 16px;
+    opacity: 0;
+}
+
+.checkbox__terminos{
+    margin-right: 10px;
+
+}
+
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn{
+    grid-column: span 2; /* Con el span se le indica al mensaje que abarque dos columnas*/
+}
+
+.formulario__mensaje{
+    height: 45px;
+    line-height: 45px;
+    background-color: var(--danger);
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+
+.formulario__mensaje p{
+    margin: 0;
+}
+
+.formulario__grupo-btn{
+    display: flex; /* Hace que el texto de envio exitoso lo muestre a la derecha del boton*/
+    flex-direction: column; /* El flex direction ubica el texto debajo del boton*/
+    align-items: center;
+}
+.formulario--btn{
+
+    border: none;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.button-registrar:hover{
+    box-shadow: 13px 0px 40px var(--info);
+}
+
+.Imagen-boton:hover {
+    box-shadow: 13px 0px 40px var(--info);
+}
+
+
+.formulario--exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.formulario--exito-activado{
+    display: block;
+
+}
+
+.formulario__grupo-correcto, .formulario__icono-validacion{
+    color: #1ed12d;
+    opacity: 1;
+    
+
+}
+
+.formulario__grupo-incorrecto .formulario__label{
+    color: var(--danger);
+
+}
+
+.formulario__grupo-incorrecto .formulario__icono-validacion{
+    color: var(--danger);
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{
+    border: 3px solid var(--danger);
+}
+
+/*iniciar sesion */
+.formulario--btn{
+    margin-top: 20px;
+}
+ /* Mediaqueries */
+ @media screen and (max-width:800px) {
+    .formulario_reg{
+        grid-template-columns: 1fr;
+    }
+   .formulario__grupo-terminos,
+   .formulario__mensaje,
+   .formulario__grupo-btn {
+        grid-column: 1; 
+    }
+    .formulario--btn{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: var(--primary)  ;
+    padding: 90px;
+    text-align: center;
+}
+
+
+footer.footer h2 {
+    color: #fff;
+}
+
+
+
+.info--icon-container .redes {
+    color: white;
+    width: 45px;
+    height: 45px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+
+
+a>i.redes:hover{
+    color: var(--secundary) !important;
+}
