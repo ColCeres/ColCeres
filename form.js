@@ -1,12 +1,13 @@
 "use stric";
 
 // espacio para el metodo principal
-
 document.addEventListener("DOMContentLoaded", function() { // funcion que escucha cuando se carga la pagina
     document.getElementById("form-registro").addEventListener("submit", validateForm); //funcion que escucha cuando se activa el evento submit en el form
+
 });
 
-function validateForm(event) { //funcion que llama a las funciones que van a validar los campos
+
+async function validateForm(event) { //funcion que llama a las funciones que van a validar los campos
 
     event.preventDefault(); // funcion que suspende el evento submit para que no se ejecute y asi validar los campos
 
@@ -24,10 +25,73 @@ function validateForm(event) { //funcion que llama a las funciones que van a val
     var dir = checkDir(document.getElementById("direccion").value); // variable que guarda el valor true o false de la validacion de los campos
     var tel = checkTelefono(document.getElementById("telefono").value); // variable que guarda el valor true o false de la validacion de los campos
     var nom = checkNombre(document.getElementById("nombre").value); // variable que guarda el valor true o false de la validacion de los campos
+    var txtContrasena = document.getElementById("contrasena").value; // variable que guarda el valor del campo
+    var txtMail = document.getElementById("correo").value; // variable que guarda el valor del campo
+    var txtDir = document.getElementById("direccion").value; // variable que guarda el valor del campo
+    var txtTel = document.getElementById("telefono").value; // variable que guarda el valor del campo
+    var txtNom = document.getElementById("nombre").value; // variable que guarda el valor del campo
 
     if (nom && tel && dir && mail && contrasena) { // condicional que evalua si las variables son true y asi activar el evento submit del form
-        this.submit();
+        // this.submit();
+        // TODO do something here to show user that form is being submitted
+        let usuario = {
+            "nombre": `${txtNom}`,
+            "telefono": `${txtTel}`,
+            "direccion": `${txtDir}`,
+            "correo": `${txtMail}`,
+            "contrasena": `${txtContrasena}`
+        }
+        var respuesta = await setUser(usuario);
+        console.log(`[respuesta en formvalidate] ${respuesta}`);
+
     }
+}
+
+function setUser(usuario) {
+    fetch('http://127.0.0.1:3000/usuarios', {
+            method: 'POST',
+            body: JSON.stringify(usuario),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then((res) => {
+            console.log(res.status);
+            return res
+        })
+        .catch(e => { console.error(e) })
+
+}
+
+async function getUsers() {
+
+    const url = `http://127.0.0.1:3000/usuarios`;
+    const params = {
+        method: "GET",
+        // body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    };
+    return await fetch(url, params)
+        .then(response => {
+            return response.json();
+        }).then(result => {
+            return {
+                result: result,
+            };
+        })
+        .then(result => {
+            console.log(result.result.body)
+        })
+        .catch((err) => {
+            return {
+                message: err.message
+            }
+
+        })
+
+
 }
 
 // fin de espacio para medoto principal

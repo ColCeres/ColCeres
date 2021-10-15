@@ -51,7 +51,7 @@
 
     <!-- section del form -->
     <section class="section-form">
-        <form action="#" method="#" class="form-registro" id="form-registro">
+        <form action="http://localhost:3000/usuarios" method="POST" name="formRegistro" class="form-registro" id="form-registro">
             <!-- espacio para el formulario de registro -->
             <div class="form-header">
                 <h2>
@@ -65,9 +65,9 @@
             </div>
             <div class="form-seccion">
                 <label>Género</label><br>
-                <input type="radio" name="genero" id="M" value="masculino" class="form-radio" required>
+                <input type="radio" name="genero" id="m" value="m" class="form-radio" required>
                 <label for="M">M</label>
-                <input type="radio" name="genero" id="F" value="femenino" class="form-radio" required>
+                <input type="radio" name="genero" id="f" value="f" class="form-radio" required>
                 <label for="F">F</label>
             </div>
             <div class="form-seccion">
@@ -94,11 +94,15 @@
 
             <!-- espacio para el botton del formulario de registro -->
             <input type="submit" id="btn-submit-form" value="Enviar" class="form-btn-enviar">
+            <input type="button" id="btn-submit-get" value="get User" onclick="getUsers()" class="form-btn-enviar">
+            <!-- <input type="submit" id="btn-submit-form" value="Enviar" onclick="agregarRegistro()" class="form-btn-enviar"> -->
+            <!-- <input type="button" id="btn-submit-form" value="Enviar" onclick="agregarRegistro(event)" class="form-btn-enviar"> -->
 
         </form>
     </section>
 
     <script src="form.js"></script>
+    <!-- <script src="registro.js"></script> -->
 </body>
 
 </html>

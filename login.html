@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <section class="section-form">
+        <form name="formRegistro" class="form-registro" id="form-registro">
+            <!-- espacio para el formulario de registro -->
+            <div class="form-header">
+                <h2>
+                    login
+                </h2>
+            </div>
+            <div class="form-seccion">
+                <label for="nombre" class="lblNombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" class="form-input"><br>
+                <span id="nomSpan" class="formAlert"></span>
+            </div>
+            <div class="form-seccion">
+                <label>Género</label><br>
+                <input type="radio" name="genero" id="M" value="m" class="form-radio" required>
+                <label for="M">M</label>
+                <input type="radio" name="genero" id="F" value="f" class="form-radio" required>
+                <label for="F">F</label>
+            </div>
+            <div class="form-seccion">
+                <label for="telefono">Teléfono</label><br>
+                <input type="tel" name="telefono" id="telefono" class="form-input"><br>
+                <span id="telSpan" class="formAlert"></span>
+            </div>
+            <div class="form-seccion">
+                <label for="direccion">Dirección</label><br>
+                <input type="text" name="direccion" id="direccion" class="form-input"><br>
+                <span id="dirSpan" class="formAlert"></span>
+            </div>
+            <div class="form-seccion">
+                <label for="correo">Correo</label><br>
+                <input type="text" name="correo" id="correo" class="form-input"><br>
+                <span id="mailSpan" class="formAlert"></span>
+            </div>
+            <div class="form-seccion">
+                <label for="contrasena">Contraseña</label><br>
+                <input type="password" name="contrasena" id="contrasena" class="form-input"><br>
+                <span id="passSpan" class="formAlert"></span>
+            </div>
+            <br>
+
+            <!-- espacio para el botton del formulario de registro -->
+            <!-- <input type="submit" id="btn-submit-form" value="Enviar" class="form-btn-enviar"> -->
+            <!-- <input type="button" id="btn-submit-get" value="get User" onclick="getUser()" class="form-btn-enviar"> -->
+            <input type="button" id="btn-submit-form" value="Enviar para login" onclick="agregarRegistro()" class="form-btn-enviar">
+            <!-- <input type="button" id="btn-submit-form" value="Enviar" onclick="agregarRegistro(event)" class="form-btn-enviar"> -->
+
+        </form>
+    </section>
+
+    <section class="section-form">
+        <form name="formLogin" class="form-registro" id="form-login">
+            <!-- espacio para el formulario de registro -->
+            <div class="form-header">
+                <h2>
+                    Login
+                </h2>
+            </div>
+            <div class="form-seccion">
+                <label for="correo">Correo</label><br>
+                <input type="text" name="correo" id="correol" class="form-input"><br>
+                <span id="mailSpan" class="formAlert"></span>
+            </div>
+
+            <div class="form-seccion">
+                <label for="telefono">Teléfono</label><br>
+                <input type="tel" name="telefono" id="telefonol" class="form-input"><br>
+                <span id="telSpan" class="formAlert"></span>
+            </div>
+
+            <div class="form-seccion">
+                <label for="contrasena">Contraseña</label><br>
+                <input type="password" name="contrasena" id="contrasenal" class="form-input"><br>
+                <span id="passSpan" class="formAlert"></span>
+            </div>
+            <div class="form-seccion">
+                <label for="captcha">Captcha</label><br>
+                <input type="tel" name="captcha" id="captcha" class="form-input"><br>
+                <span id="telSpan" class="formAlert"></span>
+            </div>
+            <!-- <div class="form-seccion">
+                <input type="checkbox" name="captcha" id="captcha" value="ocaso" class="form-radio" required>
+                <label for="captcha">CAPTCHA</label>
+            </div> -->
+            <br>
+
+            <!-- espacio para el botton del formulario de registro -->
+            <!-- <input type="submit" id="btn-submit-form" value="Enviar" class="form-btn-enviar"> -->
+            <!-- <input type="button" id="btn-submit-get" value="get User" onclick="getUser()" class="form-btn-enviar"> -->
+            <input type="button" id="btn-login" value="Enviar para login" onclick="login()" class="form-btn-enviar">
+            <!-- <input type="button" id="btn-submit-form" value="Enviar" onclick="agregarRegistro(event)" class="form-btn-enviar"> -->
+
+        </form>
+    </section>
+
+
+    <script src="/login.js"></script>
+</body>
+
+</html>
