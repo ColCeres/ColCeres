@@ -1,6 +1,7 @@
 'use strict';
 // variable global de array
 var registros = [];
+var cont = 1;
 
 //funcion de agregar contenido al array, simula la recepcion e insercion del contenido del formulario 
 function agregarRegistro() {
@@ -27,6 +28,16 @@ function login() {
 
     const result = registros.find(registros => registros.correo == correo);
     console.log(`resultado de busqueda en registros ${result}`);
+
+    if (cont == 1) {
+        cont += 1;
+        console.log(`true ${cont}`);
+        return true;
+    } else {
+        cont += 1;
+        console.log(`false ${cont}`);
+        return false;
+    }
 
     if (result != undefined) {
         if (result.correo === correo && result.telefono === telefono && result.contrasena === contrasena) {
