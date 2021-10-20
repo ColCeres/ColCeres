@@ -1,12 +1,95 @@
 "use stric";
+const products = [{
+            "name": "Coco",
+            "src": "./design/images/images-productos/fruta/Coco.jpg",
+            "alt": "Imagen de coco",
+            "precio": 3500
+        },
+        {
+            "name": "Durazno",
+            "src": "./design/images/images-productos/fruta/Durazno.jpg",
+            "alt": "Imagen de Durazno",
+            "precio": 1900
+        },
+        {
+            "name": "Mandarina",
+            "src": "./design/images/images-productos/fruta/Mandarina.jpg",
+            "alt": "Imagen de Mandarina",
+            "precio": 3315
+        },
+        {
+            "name": "Manzana",
+            "src": "./design/images/images-productos/fruta/Manzana.jpg",
+            "alt": "Imagen de Manzana",
+            "precio": 4845
+        },
+        {
+            "name": "Pera",
+            "src": "./design/images/images-productos/fruta/Pera.jpg",
+            "alt": "Imagen de Pera",
+            "precio": 3500
+        },
+        {
+            "name": "Piña",
+            "src": "./design/images/images-productos/fruta/Pina.jpg",
+            "alt": "Imagen de Piña",
+            "precio": 1900
+        },
+        {
+            "name": "Aguacate",
+            "src": "./design/images/images-productos/fruta/Aguacate.jpg",
+            "alt": "Imagen de Aguacate",
+            "precio": 3315
+        },
+        {
+            "name": "Banano",
+            "src": "./design/images/images-productos/fruta/Banano.jpg",
+            "alt": "Imagen de Banano",
+            "precio": 4845
+        },
+        {
+            "name": "Lechuga",
+            "src": "./design/images/images-productos/verduras/Lechuga.jpg",
+            "alt": "Imagen de Lechuga",
+            "precio": 3500
+        },
+        {
+            "name": "Tomate",
+            "src": "./design/images/images-productos/verduras/Tomate.jpg",
+            "alt": "Imagen de Tomate",
+            "precio": 1900
+        }
+    ]
+    // **********************************  alertas
+
+// swal("Titulo de alerta", "texto de alerta", "success");
+// swal("Titulo de alerta", "texto de alerta", "warning");
+// swal("Titulo de alerta", "texto de alerta", "error");
+// swal("Titulo de alerta", "texto de alerta", "info");
+
+// **********************************  alertas
 
 // espacio para el metodo principal
-
 document.addEventListener("DOMContentLoaded", function() { // funcion que escucha cuando se carga la pagina
     document.getElementById("form-registro").addEventListener("submit", validateForm); //funcion que escucha cuando se activa el evento submit en el form
+
+    document.getElementById('masVendidos').innerHTML = `
+        ${products.map(masVendidosTemplate).join('')}
+       `
 });
 
-function validateForm(event) { //funcion que llama a las funciones que van a validar los campos
+function masVendidosTemplate(product) {
+    return `
+    <div class="imagen-vendidos-contenedor" id="imagen-vendidos-contenedor">
+        <img class="imagen_vendidos" src="${product.src}" alt="${product.alt}">
+        <p class="Imagen-texto">${product.name}</p>
+        <p class="Imagen-precio">$${product.precio} (und)</p>
+        <div class="Imagen-boton-contenedor"><a class="Imagen-boton" href="#">Comprar</a></div>
+    </div>
+    `
+}
+
+async function validateForm(event) { //funcion que llama a las funciones que van a validar los campos
 
     event.preventDefault(); // funcion que suspende el evento submit para que no se ejecute y asi validar los campos
 
@@ -25,9 +108,98 @@ function validateForm(event) { //funcion que llama a las funciones que van a val
     var tel = checkTelefono(document.getElementById("telefono").value); // variable que guarda el valor true o false de la validacion de los campos
     var nom = checkNombre(document.getElementById("nombre").value); // variable que guarda el valor true o false de la validacion de los campos
 
-    if (nom && tel && dir && mail && contrasena) { // condicional que evalua si las variables son true y asi activar el evento submit del form
-        this.submit();
+    var txtContrasena = document.getElementById("contrasena").value; // variable que guarda el valor del campo
+    var txtMail = document.getElementById("correo").value; // variable que guarda el valor del campo
+    var txtDir = document.getElementById("direccion").value; // variable que guarda el valor del campo
+    var txtTel = document.getElementById("telefono").value; // variable que guarda el valor del campo
+    var txtNom = document.getElementById("nombre").value; // variable que guarda el valor del campo
+    var chkGenero = '';
+    if (document.getElementById('m').checked == true) {
+        chkGenero = 'm';
+    } else {
+        chkGenero = 'f';
     }
+
+    if (nom && tel && dir && mail && contrasena) { // condicional que evalua si las variables son true y asi activar el evento submit del form
+        // this.submit();
+        // TODO do something here to show user that form is being submitted
+        let usuario = {
+            "nombre": `${txtNom}`,
+            "genero": `${chkGenero}`,
+            "telefono": `${txtTel}`,
+            "direccion": `${txtDir}`,
+            "correo": `${txtMail}`,
+            "contrasena": `${txtContrasena}`
+        }
+        var respuesta = await setUser(usuario);
+        console.log(`[respuesta en formvalidate] ${respuesta}`);
+
+    }
+}
+
+async function setUser(usuario) {
+
+    // const url = `http://127.0.0.1:3000/usuarios`;
+    const url = `https://colceres-backend.herokuapp.com/usuarios`;
+    const params = {
+        method: "POST",
+        body: JSON.stringify(usuario),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    };
+    return await fetch(url, params)
+        .then(response => {
+            return response.json();
+        }).then(result => {
+            console.log(result);
+            if (result.error != '') {
+                swal("Error al registrar usuario", "Es posible que el usuario ya esté registrado", "error")
+
+            } else {
+                swal("Usuario Registrado", "Usuario Agregado con exito", "success")
+                document.getElementById('form-registro').reset();
+
+            }
+        })
+        .catch((err) => {
+            return {
+                message: err.message
+            }
+
+        })
+
+}
+
+async function getUsers() {
+
+    // const url = `http://127.0.0.1:3000/usuarios`;
+    const url = `https://colceres-backend.herokuapp.com/usuarios`;
+    const params = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    };
+    return await fetch(url, params)
+        .then(response => {
+            return response.json();
+        }).then(result => {
+            return {
+                result: result,
+            };
+        })
+        .then(result => {
+            console.log(result.result.body)
+        })
+        .catch((err) => {
+            return {
+                message: err.message
+            }
+
+        })
+
+
 }
 
 // fin de espacio para medoto principal

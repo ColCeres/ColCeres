@@ -1,16 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
-
 :root {
     /* --primary: #52B788; */
     --primary: #03140c;
     --secundary: #56a50d;
     --lightBlue: #1B4332;
-
     --button: #2e5f00;
-
     --info: #b7efc5b3;
-
     --danger: #E63946;
     --success: hsl(145, 64%, 43%);
     --warning: #FFA726;
@@ -25,23 +20,22 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #fff;
+}
 
 h2 {
     font-size: 36px;
     text-align: center;
     color: var(--secundary) !important;
-
 }
-
 
 h3 {
     font-size: 26px;
     text-align: center;
     color: var(--secundary) !important;
     padding: 10px;
-
 }
-
 
 p {
     font-size: 26px;
@@ -53,11 +47,6 @@ p {
 
 /* Base CSS */
 
-
-body {
-    background-color: #fff;
-}
-
 h1,
 h2,
 h3,
@@ -66,20 +55,19 @@ h5,
 h6 {
     font-weight: 700;
     color: var(--lightBlue);
- 
 }
-
-
 
 img {
     max-width: 100%;
     height: auto;
 }
 
+
 /* Seccion de header */
 
 .header {
-    position: fixed; /* xdxd fijar */
+    position: fixed;
+    /* xdxd fijar */
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -88,7 +76,6 @@ img {
     text-align: start;
     color: var(--white);
     z-index: 100;
-    
 }
 
 .header-logo {
@@ -117,8 +104,6 @@ div.header-logo {
     display: none;
 }
 
-
-
 .nav>.nav-links {
     font-size: 18px;
 }
@@ -142,140 +127,85 @@ div.header-logo {
 /* Navbar en movil o con pantalla menor a 900px */
 
 @media (max-width:900px) {
-
     h2 {
         font-size: 26px;
     }
-    
     p {
         font-size: 16px;
-     
     }
-    
     main.main-colceres {
         display: inherit !important;
         grid-template-columns: inherit !important;
         align-content: center;
         padding-top: 0;
     }
-    
-    
     .main--colceres-lottie {
         display: grid !important;
         grid-template-columns: 100% !important;
         margin-top: 0px !important;
     }
-    
     .main--colceres-container {
         display: grid !important;
         grid-template-columns: 100% !important;
         padding: 25px;
         margin-top: 50px !important;
-
-     
     }
-
-/***** ESTILOS BRAHIAN *******/
-
-h2.text_vendidos {
-    padding-top: 0px !important;
-}
-
-h2.text_categorias {
-    padding-top: 20px !important;
-}
-
-
-p.text_categorias-info {
-    padding: 0px !important;
-}
-
-
-article{
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3% !important;
-}
-
-
-
-
-div.s_vendidos {
-    padding: 20px 20px !important;
-}
-
-.imagen-vendidos-contenedor p {
-    padding: 0px !important;
-}
-
-
-
-.Imagen-precio{
-    font-size: 16px !important;
-
-}
-
-.Imagen-texto{
-    color: #081C15;
-    margin-bottom: 0px !important;
-}
-
-
-
-.Imagen-boton{
-    font-size: 14px !important;
-
-}
-
-
-.text_categorias-info {
-    font-size: 16px !important;
-    margin-top: 15px;
-    
- 
-}
-
-
-article.categorias{
-    display: grid;
-    grid-template-columns: 50% 50% !important;
-    padding: 0px !important;
-}
-
-
-div.imagen-categorias-contenedor {
-    padding: 20px;
-}
-
-
-
-div.main-form {
-    display: inherit !important;
-    grid-template-columns: inherit !important;
-    
-    background-color: var(--info);
-}
-
-
-
-div.lottie-form {
-    display: grid;
-    grid-template-columns: 100% !important;
-    padding: 0 20px;
-}
-
-div.form {
-    display: grid;
-    grid-template-columns: 100% !important;
-}
-
-
-
-
-
-
-
-
-
+    /***** ESTILOS BRAHIAN *******/
+    h2.text_vendidos {
+        padding-top: 0px !important;
+    }
+    h2.text_categorias {
+        padding-top: 20px !important;
+    }
+    p.text_categorias-info {
+        padding: 0px !important;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3% !important;
+    }
+    div.s_vendidos {
+        padding: 20px 20px !important;
+    }
+    .imagen-vendidos-contenedor p {
+        padding: 0px !important;
+    }
+    .Imagen-precio {
+        font-size: 16px !important;
+    }
+    .Imagen-texto {
+        color: #081C15;
+        margin-bottom: 0px !important;
+    }
+    .Imagen-boton {
+        font-size: 14px !important;
+    }
+    .text_categorias-info {
+        font-size: 16px !important;
+        margin-top: 15px;
+    }
+    article.categorias {
+        display: grid;
+        grid-template-columns: 50% 50% !important;
+        padding: 0px !important;
+    }
+    div.imagen-categorias-contenedor {
+        padding: 20px;
+    }
+    div.main-form {
+        display: inherit !important;
+        grid-template-columns: inherit !important;
+        background-color: var(--info);
+    }
+    div.lottie-form {
+        display: grid;
+        grid-template-columns: 100% !important;
+        padding: 0 20px;
+    }
+    div.form {
+        display: grid;
+        grid-template-columns: 100% !important;
+    }
     .header {
         padding: 14.5px 0px;
     }
@@ -339,12 +269,16 @@ div.form {
 }
 
 
-/* .main--img-container {
-    display: grid;
-    align-content: center;
-    top: 80px;
+/* estilos para los datos */
+
+.imgMasVendidos {
+    width: auto;
+    height: 200;
 }
- */
+
+.articleMasVendidos {
+    margin: 20px 0 20px 0;
+}
 
 
 /***** ESTILOS BRAHIAN *******/
@@ -357,45 +291,59 @@ h2.text_categorias {
     padding-top: 50px;
 }
 
-
 p.text_categorias-info {
     padding: 15px;
 }
 
-
-article{
+article {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
-img.Imagen-vendidos {
+
+/* img.Imagen-vendidos {
     display: block;
     margin: auto;
+} */
+
+.imagen_vendidos {
+    width: auto;
+    height: 200;
+    padding: 10px;
 }
 
 div.s_vendidos {
     /* padding: 50px 40px; */
     text-align: center !important;
- 
 }
 
-.Imagen-precio{
+.Imagen-precio {
     font-size: 24px;
     margin-top: 5px;
 }
-.Imagen-texto{
+
+.Imagen-texto {
     color: #081C15;
- 
+}
+
+.imagen-vendidos-contenedor {
+    margin: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px lightgrey;
+    transition: 0.5s;
+}
+
+.imagen-vendidos-contenedor:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .imagen-vendidos-contenedor p {
     padding: 0px !important;
 }
 
-
-
-
-.Imagen-boton{
+.Imagen-boton {
     font-size: 18px;
     background-color: var(--button);
     border-radius: 5px;
@@ -405,36 +353,31 @@ div.s_vendidos {
     text-align: center;
 }
 
-.Imagen-boton-contenedor{
+.Imagen-boton-contenedor {
     margin-bottom: 60px;
     margin-top: 30px;
-    
 }
 
-.text_categorias-info{
+.text_categorias-info {
     font-size: 24px;
     color: #1B4332;
- 
 }
 
-article.categorias{
+article.categorias {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     padding: 0 15px;
 }
-
 
 div.imagen-categorias-contenedor {
     padding: 20px;
 }
 
 
-
 /******************************************/
 
+
 /*** Main index **/
-
-
 
 main.main-colceres {
     display: grid;
@@ -443,7 +386,6 @@ main.main-colceres {
     padding-top: 0;
     padding: 40px;
 }
-
 
 .main--colceres-lottie {
     text-align: left;
@@ -457,18 +399,17 @@ main.main-colceres {
     grid-row-start: 1;
     justify-self: end;
     text-align: start;
- 
 }
 
-.main--colceres-container > p {
+.main--colceres-container>p {
     text-align: start;
 }
 
-.main--colceres-container > h2 {
+.main--colceres-container>h2 {
     text-align: start;
 }
 
-.main--colceres-container > p.registrar {
+.main--colceres-container>p.registrar {
     text-align: center;
     padding: 20px;
 }
@@ -481,40 +422,36 @@ main.main-colceres {
     padding-left: 2.2rem;
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-  
-  .check-list li {
+}
+
+.check-list li {
     position: relative;
     list-style-type: none;
     padding-left: 1.3rem;
     margin-bottom: 0.2rem;
     text-align: start;
-  }
-  
-  .check-list li:before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 12px;
-      width: 5px;
-      height: 11px;
-      border-width: 0 4px 4px 0;
-      border-style: solid;
-      border-color: var(--secundary);
-      transform-origin: bottom left;
-      transform: rotate(45deg);
-  }
+}
+
+.check-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+    width: 5px;
+    height: 11px;
+    border-width: 0 4px 4px 0;
+    border-style: solid;
+    border-color: var(--secundary);
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+}
 
 
 /*******/
 
 
 /* Seccion FORMULARIO */
-
-
-
-
 
 .main--lottie-container {
     text-align: left;
@@ -529,10 +466,7 @@ main.main-colceres {
     grid-column-start: 2;
     grid-row-start: 2;
     justify-self: end;
- 
 }
-
-
 
 
 /* Botón de registro dentro del menú hamburguesa */
@@ -558,111 +492,111 @@ a.btn-registrar {
     color: var(--white) !important;
 }
 
-
-
-
-
-
 div.main-form {
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: var(--info);
 }
 
-
-
-div.form{
+div.form {
     width: 90%;
     margin: auto;
     margin-top: 80px;
     padding: 0px 20px;
-
 }
 
-
-hr{
+hr {
     height: 2px;
     font-weight: bold;
     background-color: #000;
     border-color: #000;
 }
 
-.lineafinal1{
+.lineafinal1 {
     margin-bottom: 16px;
     height: 2px;
     font-weight: bold;
     background-color: #000;
     border-color: #000;
-
 }
 
-.formulario_reg{
+.formulario_reg {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     margin-bottom: 30px;
 }
 
-.formulario__label{
-    display: block;  /* Abarcar 100% del espacio */
-    font-weight: bold; /* Fuente negrita*/
-    padding: 10px; /* Espacio a los lados*/
-    cursor: pointer; /* Cuando se ponga el cursor encima selecciona el input respectivo*/
+.formulario__label {
+    display: block;
+    /* Abarcar 100% del espacio */
+    font-weight: bold;
+    /* Fuente negrita*/
+    padding: 10px;
+    /* Espacio a los lados*/
+    cursor: pointer;
+    /* Cuando se ponga el cursor encima selecciona el input respectivo*/
 }
 
-.formulario__grupo-input{
-    position: relative; /* Posicionamiento relativo  */
+.formulario__grupo-input {
+    position: relative;
+    /* Posicionamiento relativo  */
 }
 
-.formulario__input{
+.formulario__input {
     width: 100%;
     background-color: #fff;
     border: 3px solid transparent;
     border-radius: 15px;
-    height:45px;
+    height: 45px;
     line-height: 45px;
     padding: 0 40px 0 10px;
     transition: .3s ease all;
 }
 
-.formulario__input:focus{
+.formulario__input:focus {
     border: 3px solid #0075ff;
-    outline: none; /* Quitar subrayado que hacen los browsers*/
-    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+    outline: none;
+    /* Quitar subrayado que hacen los browsers*/
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
-.formulario__grupo-input-error{
-    font-size: 12px;  /* Texto mas pequeño*/
-    margin-bottom: 0;  /* Quitar el margen que agrega por defecto al ser un parrafo */
-    display: none;  /* Los mensajes asociados al input-error estarán ocultos*/
+.formulario__grupo-input-error {
+    font-size: 12px;
+    /* Texto mas pequeño*/
+    margin-bottom: 0;
+    /* Quitar el margen que agrega por defecto al ser un parrafo */
+    display: none;
+    /* Los mensajes asociados al input-error estarán ocultos*/
 }
 
-.formulario__grupo-input-error-activo{  /*Cuando el error del input este activo se desplega el mensaje*/
+.formulario__grupo-input-error-activo {
+    /*Cuando el error del input este activo se desplega el mensaje*/
     display: block;
-
 }
 
-.formulario__icono-validacion{
+.formulario__icono-validacion {
     position: absolute;
     right: 10px;
     bottom: 15px;
-    z-index: 100;  /* Asegura que va a estar encima de otros elementos */
+    z-index: 100;
+    /* Asegura que va a estar encima de otros elementos */
     font-size: 16px;
     opacity: 0;
 }
 
-.checkbox__terminos{
+.checkbox__terminos {
     margin-right: 10px;
-
 }
 
 .formulario__grupo-terminos,
 .formulario__mensaje,
-.formulario__grupo-btn{
-    grid-column: span 2; /* Con el span se le indica al mensaje que abarque dos columnas*/
+.formulario__grupo-btn {
+    grid-column: span 2;
+    /* Con el span se le indica al mensaje que abarque dos columnas*/
 }
 
-.formulario__mensaje{
+.formulario__mensaje {
     height: 45px;
     line-height: 45px;
     background-color: var(--danger);
@@ -671,27 +605,29 @@ hr{
     display: none;
 }
 
-.formulario__mensaje-activo{
+.formulario__mensaje-activo {
     display: block;
 }
 
-.formulario__mensaje p{
+.formulario__mensaje p {
     margin: 0;
 }
 
-.formulario__grupo-btn{
-    display: flex; /* Hace que el texto de envio exitoso lo muestre a la derecha del boton*/
-    flex-direction: column; /* El flex direction ubica el texto debajo del boton*/
+.formulario__grupo-btn {
+    display: flex;
+    /* Hace que el texto de envio exitoso lo muestre a la derecha del boton*/
+    flex-direction: column;
+    /* El flex direction ubica el texto debajo del boton*/
     align-items: center;
 }
-.formulario--btn{
 
+.formulario--btn {
     border: none;
     cursor: pointer;
     transition: 1s ease all;
 }
 
-.button-registrar:hover{
+.button-registrar:hover {
     box-shadow: 13px 0px 40px var(--info);
 }
 
@@ -699,84 +635,69 @@ hr{
     box-shadow: 13px 0px 40px var(--info);
 }
 
-
-.formulario--exito{
+.formulario--exito {
     font-size: 14px;
     color: #119200;
     display: none;
 }
 
-.formulario--exito-activado{
+.formulario--exito-activado {
     display: block;
-
 }
 
-.formulario__grupo-correcto, .formulario__icono-validacion{
+.formulario__grupo-correcto,
+.formulario__icono-validacion {
     color: #1ed12d;
     opacity: 1;
-    
-
 }
 
-.formulario__grupo-incorrecto .formulario__label{
+.formulario__grupo-incorrecto .formulario__label {
     color: var(--danger);
-
 }
 
-.formulario__grupo-incorrecto .formulario__icono-validacion{
+.formulario__grupo-incorrecto .formulario__icono-validacion {
     color: var(--danger);
     opacity: 1;
 }
 
-.formulario__grupo-incorrecto .formulario__input{
+.formulario__grupo-incorrecto .formulario__input {
     border: 3px solid var(--danger);
 }
 
+
 /*iniciar sesion */
-.formulario--btn{
+
+.formulario--btn {
     margin-top: 20px;
 }
- /* Mediaqueries */
- @media screen and (max-width:800px) {
-    .formulario_reg{
+
+
+/* validacion de campos del form */
+
+.formAlert {
+    color: var(--danger);
+    font-size: 0.7em;
+}
+
+
+/* fin validacion de campos del form */
+
+
+/* Mediaqueries */
+
+@media screen and (max-width:800px) {
+    .formulario_reg {
         grid-template-columns: 1fr;
     }
-   .formulario__grupo-terminos,
-   .formulario__mensaje,
-   .formulario__grupo-btn {
-        grid-column: 1; 
+    .formulario__grupo-terminos,
+    .formulario__mensaje,
+    .formulario__grupo-btn {
+        grid-column: 1;
     }
-    .formulario--btn{
+    .formulario--btn {
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* FOOTER */
@@ -784,17 +705,14 @@ hr{
 .footer {
     display: grid;
     grid-template-columns: 100%;
-    background-color: var(--primary)  ;
+    background-color: var(--primary);
     padding: 90px;
     text-align: center;
 }
 
-
 footer.footer h2 {
     color: #fff;
 }
-
-
 
 .info--icon-container .redes {
     color: white;
@@ -803,10 +721,8 @@ footer.footer h2 {
     padding-top: 15px;
     text-align: center;
     font-size: 1.8rem;
-
 }
 
-
-a>i.redes:hover{
+a>i.redes:hover {
     color: var(--secundary) !important;
 }
